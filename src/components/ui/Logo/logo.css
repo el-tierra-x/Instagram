@@ -1,0 +1,18 @@
+*{
+     --logo-small-size :  8em;
+     --logo-large-size : 20em;
+}
+
+a.logo{
+     color : var(--primary-color);
+     font-style:normal;
+     display:block;
+}
+
+a.logo.logo--small{
+     width:var(--logo-small-size);
+}
+
+a.logo.logo--large{
+     width:var(--logo-large-size);
+}

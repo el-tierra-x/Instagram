@@ -1,0 +1,7 @@
+div.page-wrapper{
+     margin:0.5em;
+     border:var(--standard-border-width) solid var(--page-wrapper-border-color);
+     min-height:700px;
+     display:flex;
+     flex-flow:column;
+}

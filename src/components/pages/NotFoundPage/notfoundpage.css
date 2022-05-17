@@ -1,0 +1,14 @@
+div.not-found-page-wrapper{
+     padding:1em 0px;
+     margin-top:2em;
+}
+
+div.not-found-page-wrapper a.go-to-home{
+     color:var(--primary-color);
+     border:var(--standard-border-width) solid currentColor;
+     padding:0.5em;
+     display:block;
+     margin:0 auto;
+     margin-top:1em;
+     width:fit-content;
+}

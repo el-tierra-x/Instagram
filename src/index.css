@@ -1,0 +1,190 @@
+@import url(https://fonts.googleapis.com/css?family=Sora:100,200,300,regular,500,600,700,800);
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color:var(--complementary-primary-color);
+  color:var(--primary-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  --page-wrapper-border-color : black;
+  --primary-color : #292929;
+  --standard-border-width : 1px;
+  --thinner-border-width:1px;
+  --main-font-family : 'Sora' , sans-serif;
+  --aside-section-heading-bg : #f6f6f6;
+  --user-below-photo-bg : #f4f4f4;
+  --primary-background-color : #f5f5f5;
+
+  --complementary-primary-color : white;
+  --faded-primary-color : #333;
+
+
+  --fallback-image-icon-small-size : 0.9em;
+  --fallback-image-icon-small-mid-size : 1.2em;
+  --fallback-image-icon-large-size : 3em;
+  --fallback-image-icon-medium-size : 1.5em;
+
+
+  --navbar-icon-size : 1.5em;
+
+  --fallback-page-bg-color : #f5f5f5;
+
+
+  --aside-section-padding : 0.5em 2em;
+  --single-user-item-padding-top-bottom : 0.8em;
+
+  --textarea-non-focus-border-color:#a5a5a5;
+  --textarea-focus-border-color : #000;
+  
+  --disabled-color : #ddd;
+  --heart-color : #e31b23;
+
+  --error-color : red;
+  --fallback-inline-page-left-pane-width : 5px;
+
+  --preview-image-filler-bg : #000;
+  --tab-enabled-background : #efefef;
+
+  --md-breakpoint : 1200px;
+  --sm-breakpoint : 800px;
+
+
+  --lg-stat-icon-font : 1em;
+  --lg-stat-icon-size : 1.8em;
+
+
+  --md-stat-icon-font : 1em;
+  --md-stat-icon-size : 1.8em;
+
+
+  --sm-stat-icon-font : 1em;
+  --sm-stat-icon-size:1.8em;
+  
+  --backdrop : rgba(0,0,0,0.5);
+
+  --sm-navbar-icon-size : 1.2em;
+
+}
+
+
+html[mode="dark"]{
+
+  --page-wrapper-border-color : white;
+  --primary-color : white;
+  --aside-section-heading-bg : #292929;
+  --user-below-photo-bg : #111;
+  --primary-background-color : #292929;
+
+  --complementary-primary-color : black;
+  --faded-primary-color : #eee;
+
+
+  --fallback-page-bg-color : #111;
+
+  --textarea-non-focus-border-color:#a5a5a5;
+  --textarea-focus-border-color : white;
+  
+  --disabled-color : #ddd;
+  --heart-color : #e31b23;
+
+  --error-color : red;
+  --preview-image-filler-bg : #222;
+  --tab-enabled-background : #333;
+
+  --backdrop : rgba(0,0,0,0.5);
+}
+
+textarea , input , a , button{
+  outline:none;
+  font-size:inherit;
+  font-family:inherit;
+  text-decoration:none;
+  resize:none;
+  background-color:var(--complementary-primary-color);
+  border:0px;
+  color:inherit;
+}
+
+
+body{
+  font-family:var(--main-font-family);
+  overscroll-behavior: contain;
+}
+
+@keyframes slider-animation{
+  from{
+    transform:translateX(-200%);
+  }
+  to{
+    transform:translateX(200%);
+  }
+}
+
+@keyframes fade-in{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes fade-in-and-move-up{
+  from{
+    opacity:0;
+    transform:translateY(100px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0px);
+  }
+}
+
+@keyframes translate-up-from-zero-opacity{
+  from{
+    opacity:0;
+    transform:translate(-50% , 20px);
+  }
+  to{
+    opacity:1;
+    transform:translate(-50% , 0px);
+  }
+}
+
+@keyframes loading-with-stroke-animation{
+  0%{
+    stroke-dasharray: 20px;
+    stroke-dashoffset: 40px;
+  }
+  25%{
+    stroke-dasharray: 30px;
+    stroke-dashoffset: 40px;
+  }
+  50%{
+    stroke-dasharray: 40px;
+    stroke-dashoffset: 40px;
+  }
+  75%{
+    stroke-dasharray: 50px;
+    stroke-dashoffset: 40px;
+  }
+  100%{
+    stroke-dasharray: 60px;
+    stroke-dashoffset: 40px;
+  }
+}

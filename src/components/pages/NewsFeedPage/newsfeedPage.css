@@ -1,0 +1,31 @@
+div.news-feed-page{
+     display:flex;
+     align-items:flex-start;
+     justify-content: center;
+     flex-grow:1;
+     padding-top:2em;
+     gap:8em;
+}
+
+div.news-feed-page__aside{
+     position:sticky;
+     top:5em;
+     width:400px;
+}
+
+.news-feed-page__aside__recently-active-user-list{
+     display:flex;
+     padding:1em 0px;
+     gap:1em;
+     align-items:center;
+}
+
+.news-feed-page__aside__recently-active-user{
+     border-radius:50%;
+}
+
+@media screen and (max-width:1200px){
+     div.news-feed-page__aside{
+          display:none;
+     }
+}

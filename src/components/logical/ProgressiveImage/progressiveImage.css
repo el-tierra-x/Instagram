@@ -1,0 +1,11 @@
+img.image--blur{
+     filter:blur(4px);
+}
+
+div.progressive-image-wrapper{
+     display:flex;
+}
+
+div.progressive-image-wrapper img{
+     width:100%; 
+}

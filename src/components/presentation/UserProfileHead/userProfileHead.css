@@ -1,0 +1,108 @@
+*{
+     --lg-user-profile-head-avatar-size : 200px;
+     --sm-user-profile-head-avatar-size : 100px;
+
+     --lg-user-profile-head-gap : 4em;
+     --sm-user-profile-head-gap : 2em;
+
+}
+
+
+div.user-profile-head{
+     padding:2em;
+     display:flex;
+     justify-content: center;
+     gap:var(--lg-user-profile-head-gap);
+     margin-top:2em;
+     border-bottom:var(--standard-border-width) solid var(--primary-color);
+     position:relative;
+}
+
+div.user-profile-head > *{
+     position:relative;
+     z-index:1;
+}
+
+div.user-profile-head::after{
+     position:absolute;
+     content:"";
+     width:100%;
+     height:var(--standard-border-width);
+     background-color:var(--primary-color);
+     top:50%;
+}
+
+div.user-profile-head div.user-profile-head__avatar-wrapper{
+     width:var(--lg-user-profile-head-avatar-size);
+     height:var(--lg-user-profile-head-avatar-size);
+     display:inline-grid;
+     place-items:center;
+     border:var(--standard-border-width) solid var(--primary-color);
+     border-radius:50%;
+     background-color:var(--complementary-primary-color);
+}
+
+
+div.user-profile-head div.user-profile-head__avatar-wrapper .user-profile-head__avatar{
+     width:80%;
+     height:80%;
+     border-radius:inherit;
+     border:inherit;
+}
+
+div.user-profile-head__avatar-info .user-profile-head__avatar-username{
+     margin-top:0px;
+     margin-bottom:0.5em;
+}
+
+
+div.user-profile-head__avatar-info .user-profile-head__avatar-fullname{
+     font-weight:regular;
+}
+
+div.user-profile-head__stats{
+     display:flex;
+     align-items:flex-end;
+     gap:2em;
+     margin-top:3em;
+}
+
+div.user-profile-head__stats__icon{
+     font-size:var(--md-stat-icon-font);
+     text-align:center;
+     font-weight:600;
+}
+
+div.user-profile-head__stats__icon svg{
+     width:3em;
+     height:3em;
+}
+
+@media screen and (max-width:800px){
+     div.user-profile-head{
+          flex-flow:column;
+          align-items:center;
+          text-align:center;
+          gap:var(--sm-user-profile-head-gap);
+          font-size:0.9em;
+          padding:0px;
+          padding-bottom:1em;
+     }
+
+     div.user-profile-head::after{
+          content:none;
+     }
+
+
+     div.user-profile-head div.user-profile-head__avatar-wrapper{
+          width:var(--sm-user-profile-head-avatar-size);
+          height:var(--sm-user-profile-head-avatar-size);
+     }
+
+     div.user-profile-head__stats{
+          justify-content: center;
+          margin-top:1em;
+          margin-bottom:2em;
+     }
+
+}

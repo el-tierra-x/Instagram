@@ -1,0 +1,165 @@
+*{
+     --lg-fallback-page-icon-size : 3em;
+     --lg-fallback-page-text-font-size : 1.3em;
+
+     --sm-fallback-page-icon-size : 2em;
+     --sm-fallback-page-text-font-size : 1em;
+
+     --lg-fallback-inline-margin : 2em;
+     --sm-fallback-inline-margin : 0.5em;
+
+     --fallback-button-text-size : 1em;
+
+     --fallback-inline-icon-size : 2em;
+     
+     --fallback-page-loading-slider-length : 200px;
+     --fallback-page-slider-bg-color : #ccc;
+
+     --lg-fallback-page-padding : 1em;
+     --sm-fallback-page-padding : 0.5em 1em;
+
+     --lg-fallback-page-gap : 1em;
+     --sm-fallback-page-gap  : 0.5em;
+
+
+}
+
+
+div.fallback-full-page{
+     padding:var(--lg-fallback-page-padding);
+     display:flex;
+     align-items:center;
+     flex-flow:column;
+     justify-content: center;
+     text-align:center;
+     height:100%;
+     width:100%;
+     gap:var(--lg-fallback-page-gap);
+}
+
+div.fallback-full-page--small{
+     padding : var(--sm-fallback-page-padding);
+     gap:var(--sm-fallback-page-gap);
+}
+
+div.fallback-full-page--large i.fallback-full-page__icon{
+     width:var(--lg-fallback-page-icon-size);
+     height:var(--lg-fallback-page-icon-size);
+} 
+
+div.fallback-full-page--small i.fallback-full-page__icon{
+     width:var(--sm-fallback-page-icon-size);
+     height:var(--sm-fallback-page-icon-size);
+}
+
+div.fallback-full-page span.fallback-full-page__text{
+     font-style:normal;
+}
+
+div.fallback-full-page--large span.fallback-full-page__text{
+     max-width:90%;
+     font-size:var(--lg-fallback-page-text-font-size);
+}
+
+
+div.fallback-full-page--small span.fallback-full-page__text{
+     max-width:90%;
+     font-size:var(--sm-fallback-page-text-font-size);
+}
+
+div.fallback-full-page span.fallback-full-page__loading-slider{
+     width:var(--fallback-page-loading-slider-length);
+     height:3px; 
+     position:relative;
+     overflow:hidden;
+     background-color:var(--fallback-page-slider-bg-color);
+}
+
+div.fallback-full-page span.fallback-full-page__loading-slider::after{
+     position:absolute;
+     inset:0px;
+     content:"";
+     background-color:var(--primary-color);
+     animation:slider-animation 2s linear infinite both;
+}
+
+
+
+div.fallback-inline-page{
+     border:var(--standard-border-width) solid var(--primary-color);
+     border-left:0px;
+     position:relative;
+     padding:var(--lg-fallback-page-padding);
+     margin:var(--lg-fallback-inline-margin);
+}
+
+div.fallback-inline-page--large{
+     padding:var(--lg-fallback-page-padding);
+     margin:var(--lg-fallback-inline-margin);
+}
+
+div.fallback-inline-page--small{
+     padding:var(--sm-fallback-page-padding);
+     margin:var(--sm-fallback-inline-margin);
+}
+
+div.fallback-inline-page::after{
+     position:absolute;
+     content:"";
+     width:var(--fallback-inline-page-left-pane-width);
+     background-color: currentColor;
+     height:100%;
+     left:0px;
+     top:0px;
+     z-index:1;
+}
+
+div.fallback-inline-page--error::after{
+     color:var(--error-color);
+}
+
+
+div.fallback-inline-page div.fallback-inline{
+     display:flex;
+     align-items:center;
+}
+
+div.fallback-inline-page i.fallback-inline-page__icon svg{
+     width:var(--fallback-inline-icon-size);
+     height:var(--fallback-inline-icon-size);
+     margin-right:1em;
+     display:inline-block;
+}
+
+div.fallback-inline-page i.fallback-inline-page__icon svg #loading-path{
+     animation:loading-with-stroke-animation 1s linear infinite both;
+}
+
+div.fallback-inline-page span.fallback-inline-page__text{
+     font-size:var(--fallback-page-text-font-size);
+}
+
+div.fallback-inline-page button{
+     padding:0.5em;
+     font-size:var(--fallback-button-text-size);
+     margin-top:1em;
+     border:var(--standard-border-width) solid currentColor;
+     color:var(--textarea-focus-border-color);
+     transition : outline-offset 0.1s ease-out;
+}
+
+div.fallback-inline-page button:focus , 
+div.fallback-inline-page button:hover{
+     outline:var(--standard-border-width) solid var(--primary-color);
+     outline-offset:2px;
+}
+
+@media screen and (max-width:600px){
+     div.fallback-inline-page--large{
+          padding:var(--lg-fallback-page-padding);
+          margin:var(--lg-fallback-inline-margin);
+     }     
+     div.fallback-full-page--large span.fallback-full-page__text{
+          font-size:var(--sm-fallback-page-text-font-size);
+     }
+}

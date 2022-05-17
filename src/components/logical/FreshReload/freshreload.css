@@ -1,0 +1,23 @@
+div.fresh-reload{
+     position:absolute;
+     height:120px;
+     display:grid;
+     place-items:center;
+     z-index:-1;
+     width:100%;
+     top:0px;
+     left:0px;
+     transform:translateY(-100%);
+     gap:1em;
+     background-color:var(--complementary-primary-color);
+}
+
+div.fresh-reload span.fresh-reload__icon{
+     animation:loading-with-stroke-animation 2s linear infinite;
+     display:block;
+}
+
+div.fresh-reload span.fresh-reload__icon svg{
+     width:2em;
+     height:2em;
+}

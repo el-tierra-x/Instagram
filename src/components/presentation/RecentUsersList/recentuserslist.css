@@ -1,0 +1,38 @@
+*{
+  --lg-recent-users-list-width : 220px;
+  --sm-recent-users-list-width : 180px;
+}
+
+
+div.recent-users-list-wrapper{
+  width:var(--lg-recent-users-list-width);
+}
+
+div.recent-users-list-wrapper ul.recent-users__list{
+  list-style:none;
+  padding-left:0px;
+  margin:0px;
+  display:flex;
+  flex-flow:column;
+  font-style:normal;
+  color:var(--primary-color);
+}
+div.recent-users-list-wrapper ul.recent-users__list>*{
+  padding:0.8em 1em;
+}
+div.recent-users-list-wrapper ul.recent-users__list h4{
+  margin:0px;
+  border-bottom:var(--standard-border-width) solid var(--primary-color);
+}
+
+div.recent-users-list-wrapper a:hover , 
+div.recent-users-list-wrapper a:focus  
+{
+  background-color:var(--aside-section-heading-bg);
+}
+
+@media screen and (max-width:600px) {
+  div.recent-users-list-wrapper{
+    width:var(--sm-recent-users-list-width);
+  } 
+}

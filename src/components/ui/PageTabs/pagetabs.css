@@ -1,0 +1,20 @@
+div.page-tabs{
+     margin:2em auto;
+     width:fit-content;
+     border:var(--standard-border-width) solid var(--primary-color);
+}
+
+div.page-tabs .page-tab{
+     padding:1em;
+     display:inline-block;
+     color:var(--primary-color);
+     cursor:pointer;
+}
+
+div.page-tabs .page-tab--active{
+     background-color:var(--tab-enabled-background);
+}
+
+div.page-tabs .page-tab:not(:last-child){
+     border-right:var(--standard-border-width) solid var(--primary-color);
+}

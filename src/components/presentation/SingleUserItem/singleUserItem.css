@@ -1,0 +1,29 @@
+div.single-user-item{
+     display:flex;
+     align-items:center;
+}
+
+.single-user-item__username{
+     flex-grow:1;
+}
+
+div.single-user-item button{
+     padding:0.5em;
+     background-color:var(--complementar-primary-color);
+     border:var(--standard-border-width) solid currentColor;
+     color:var(--primary-color);
+     font-size:0.8em;
+     cursor:pointer;
+}
+
+div.single-user-item button.following{
+     border:0px;
+     color:var(--faded-primary-color);
+}
+
+
+
+div.aside-section div.single-user-item{
+     padding-top:var(--single-user-item-padding-top-bottom);
+     padding-bottom:var(--single-user-item-padding-top-bottom);
+}

@@ -1,0 +1,7 @@
+.intersection-line{
+     display:block;
+     height:3px;
+     background:transparent;
+     pointer-events:none;
+     margin:1em auto;
+}

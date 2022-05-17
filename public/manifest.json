@@ -1,0 +1,25 @@
+{
+  "short_name": "Growwgram",
+  "name": "Growwgram : A Random Instagram",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "32x31",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "growwGramIcon.png",
+      "type": "image/png",
+      "sizes": "68x66"
+    },
+    {
+      "src": "growwGramIcon192.png",
+      "type": "image/png",
+      "sizes": "198x198"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

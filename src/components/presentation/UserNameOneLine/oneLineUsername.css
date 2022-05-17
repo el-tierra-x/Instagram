@@ -1,0 +1,55 @@
+*{
+     --small-username-one-line-gap : 0.5em;
+     --small-username-one-line-font-size : 1em;
+     --small-username-avatar-size : 1.2em;
+
+     --large-username-one-line-gap: 0.8em;
+     --large-username-one-line-font-size : 1.3em;
+     --large-username-avatar-size : 2em;
+
+     --medium-username-one-line-gap: 0.3em;
+     --medium-username-one-line-font-size : 1.1em;
+     --medium-username-avatar-size : 1.5em;
+}
+
+.oneline-username{
+     display:flex;
+     align-items:center;
+}
+
+.oneline-username--small{
+     gap:var(--small-username-one-line-gap);
+     font-size:var(--small-username-one-line-font-size);
+}
+
+.oneline-username div.oneline-username__avatar{
+     border-radius:50%;
+     overflow:hidden;
+     background-color:var(--preview-image-filler-bg);
+     flex-shrink:0;
+}
+
+.oneline-username--small div.oneline-username__avatar{
+     width:var(--small-username-avatar-size);
+     height:var(--small-username-avatar-size);
+}
+
+.oneline-username--large div.oneline-username__avatar{
+     width:var(--large-username-avatar-size);
+     height:var(--large-username-avatar-size);
+}
+
+.oneline-username--medium div.oneline-username__avatar{
+     width:var(--medium-username-avatar-size);
+     height:var(--medium-username-avatar-size);
+}
+
+.oneline-username--large{
+     gap:var(--large-username-one-line-gap);
+     font-size:var(--large-username-one-line-font-size);
+}
+
+.oneline-username--medium{
+     gap:var(--medium-username-one-line-gap);
+     font-size:var(--medium-username-one-line-font-size);
+}
